@@ -555,6 +555,7 @@ src="https://www.facebook.com/tr?id=1364249135596214&ev=PageView&noscript=1"
     if(!validStep1()){ goStep(1); return; }
     if(!validStep2()) return;
     const url = waLink();
+    fbq('track', 'Lead');
     const w = window.open(url, "_blank");
     if(w) w.opener = null; else window.location.href = url;  // si el navegador bloquea la pestaña nueva
   });
